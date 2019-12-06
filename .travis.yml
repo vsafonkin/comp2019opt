@@ -7,40 +7,40 @@ install:
 
 jobs:
   include:
-    - stage: round 1
+    - stage: round_1
       script: python3 round_1.py
       cache: pip
-    - stage: round 2
+    - stage: round_2
       script: python3 round_2.py
       cache: pip
-    - stage: round 3
+    - stage: round_3
       script: python3 round_2.py
       cache: pip
-    - stage: round 4
+    - stage: round_4
       script: python3 round_2.py
       cache: pip
-    - stage: round 5
+    - stage: round_5
       script: python3 round_2.py
       cache: pip
-    - stage: round 6
+    - stage: round_6
       script: python3 round_2.py
       cache: pip
-    - stage: round 7
+    - stage: round_7
       script: python3 round_2.py
       cache: pip
-    - stage: round 8
+    - stage: round_8
       script: python3 round_2.py
       cache: pip
-    - stage: round 9
+    - stage: round_9
       script: python3 round_2.py
       cache: pip
-    - stage: round 10
+    - stage: round_10
       script: python3 round_2.py
       cache: pip
-    - stage: round 11
+    - stage: round_11
       script: python3 round_2.py
       cache: pip
-    - stage: final round and deploy
+    - stage: final_round_and_deploy
       script: python3 stochastic_search.py
       cache: pip
       before_deploy:
