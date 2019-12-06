@@ -86,4 +86,4 @@ best = stochastic_product_search(
 
 sample_submission['assigned_day'] = best
 final_score = cost_function(best)
-sample_submission.to_csv(f'build/submission_{int(final_score)}.csv')
+sample_submission.to_csv(f'temp/temp_submission.csv')
