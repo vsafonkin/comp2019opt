@@ -14,6 +14,11 @@ stages:
   - round_9
   - round_10
   - round_11
+  - round_12
+  - round_13
+  - round_14
+  - round_15
+  - round_16
   - final_round_and_deploy
 
 install:
@@ -52,6 +57,21 @@ jobs:
       script: python3 round_2.py
       cache: pip
     - stage: round_11
+      script: python3 round_2.py
+      cache: pip
+    - stage: round_12
+      script: python3 round_2.py
+      cache: pip
+    - stage: round_13
+      script: python3 round_2.py
+      cache: pip
+    - stage: round_14
+      script: python3 round_2.py
+      cache: pip
+    - stage: round_15
+      script: python3 round_2.py
+      cache: pip
+    - stage: round_16
       script: python3 round_2.py
       cache: pip
     - stage: final_round_and_deploy
