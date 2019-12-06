@@ -10,7 +10,7 @@ from cost_function_24 import build_cost_function
 
 data = pd.read_csv('data/family_data.csv', index_col='family_id')
 sample_submission = pd.read_csv("data/sample_submission.csv", index_col='family_id')
-submission = pd.read_csv('data/submission_117334.csv', index_col='family_id')
+submission = pd.read_csv('data/submission_72095.csv', index_col='family_id')
 
 # Build your "cost_function"
 cost_function = build_cost_function(data)
@@ -79,9 +79,9 @@ choice_matrix = data.loc[:, 'choice_0': 'choice_9'].values
 best = stochastic_product_search(
     choice_matrix=choice_matrix, 
     top_k=4,
-    fam_size=2, 
+    fam_size=6, 
     original=original, 
-    n_iter=100,
+    n_iter=100000,
 )
 
 sample_submission['assigned_day'] = best
