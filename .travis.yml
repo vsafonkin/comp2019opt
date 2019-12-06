@@ -13,10 +13,9 @@ jobs:
     - stage: round 2
       script: python3 round_2.py
       cache: pip
-    - stage: round 3
+    - stage: round 3 and deploy
       script: python3 stochastic_search.py
       cache: pip
-    - stage: deploy
       before_deploy:
       - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y-%m-%d_%H-%M')}
       - git tag $TRAVIS_TAG
