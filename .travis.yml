@@ -54,8 +54,7 @@ jobs:
     - stage: round_11
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "final_round_and_deploy"
+    - stage: final_round_and_deploy
       script: python3 stochastic_search.py
       cache: pip
       before_deploy:
