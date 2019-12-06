@@ -13,7 +13,7 @@ from cost_function_24 import build_cost_function
 
 data = pd.read_csv('data/family_data.csv', index_col='family_id')
 sample_submission = pd.read_csv("data/sample_submission.csv", index_col='family_id')
-submission = pd.read_csv(f'{HOME}/temp/temp_submission.csv', index_col='family_id')
+submission = pd.read_csv(f'{HOME}/.cache/pip/temp_submission.csv', index_col='family_id')
 
 # Build your "cost_function"
 cost_function = build_cost_function(data)
