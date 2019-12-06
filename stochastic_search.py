@@ -44,8 +44,8 @@ def stochastic_product_search(top_k, fam_size, original, choice_matrix,
         # if 93 not in changes.flatten():
         #     continue
         # print(fam_indices)
-        if 1653 not in fam_indices:
-            continue
+        # if 1653 not in fam_indices:
+        #     continue
 
         for change in changes:
             new = best.copy()
@@ -79,9 +79,9 @@ choice_matrix = data.loc[:, 'choice_0': 'choice_9'].values
 best = stochastic_product_search(
     choice_matrix=choice_matrix, 
     top_k=4,
-    fam_size=4, 
+    fam_size=2, 
     original=original, 
-    n_iter=1000000,
+    n_iter=3000000,
 )
 
 sample_submission['assigned_day'] = best
