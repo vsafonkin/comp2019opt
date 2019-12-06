@@ -9,8 +9,10 @@ jobs:
   include:
     - stage: round 1
       script: python3 round_1.py
+      skip_cleanup: true
     - stage: round 2
       script: python3 round_2.py
+      skip_cleanup: true
     - stage: round 3
       script: python3 stochastic_search.py
     - stage: deploy
