@@ -82,9 +82,9 @@ choice_matrix = data.loc[:, 'choice_0': 'choice_9'].values
 best = stochastic_product_search(
     choice_matrix=choice_matrix, 
     top_k=4,
-    fam_size=2, 
+    fam_size=3, 
     original=original, 
-    n_iter=100,
+    n_iter=100000,
 )
 
 sample_submission['assigned_day'] = best
