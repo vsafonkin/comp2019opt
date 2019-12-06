@@ -2,53 +2,56 @@ language: python
 python:
   - "3.6"
 
+stages:
+  - round_1
+  - round_2
+  - round_3
+  - round_4
+  - round_5
+  - round_6
+  - round_7
+  - round_8
+  - round_9
+  - round_10
+  - round_11
+  - final_round_and_deploy
+
 install:
   - pip install -r requirements.txt
 
 jobs:
   include:
-    - stage:
-      name: "round_1"
+    - stage: round_1
       script: python3 round_1.py
       cache: pip
-    - stage:
-      name: "round_2"
+    - stage: round_2
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_3"
+    - stage: round_3
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_4"
+    - stage: round_4
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_5"
+    - stage: round_5
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_6"
+    - stage: round_6
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_7"
+    - stage: round_7
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_8"
+    - stage: round_8
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_9"
+    - stage: round_9
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_10"
+    - stage: round_10
       script: python3 round_2.py
       cache: pip
-    - stage:
-      name: "round_11"
+    - stage: round_11
       script: python3 round_2.py
       cache: pip
     - stage:
