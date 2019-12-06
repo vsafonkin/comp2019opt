@@ -5,6 +5,20 @@ python:
 install:
   - pip install -r requirements.txt
 
+stages:
+  - round_1
+  - round_2
+  - round_3
+  - round_4
+  - round_5
+  - round_6
+  - round_7
+  - round_8
+  - round_9
+  - round_10
+  - round_11
+  - final_round_and_deploy
+
 jobs:
   include:
     - stage: round_1
