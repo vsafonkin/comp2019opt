@@ -84,7 +84,7 @@ best = stochastic_product_search(
     top_k=4,
     fam_size=3, 
     original=original, 
-    n_iter=10000,
+    n_iter=500000,
 )
 
 sample_submission['assigned_day'] = best
