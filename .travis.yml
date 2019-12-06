@@ -9,7 +9,7 @@ script: python3 stochastic_search.py
 
 deploy:
   provider: releases
-  api_key: "b36f79a6c44768f4aa333be4b4d152ccc6c17480"
+  api_key: $GITHUB_TOKEN
   file_glob: true
   file: build/*.csv
   skip_cleanup: true
