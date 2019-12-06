@@ -11,7 +11,7 @@ deploy:
   provider: releases
   api_key: "b36f79a6c44768f4aa333be4b4d152ccc6c17480"
   file_glob: true
-  file: build/*
+  file: "*.csv"
   skip_cleanup: true
   on:
     tags: false
