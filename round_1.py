@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 from tqdm import tqdm
 from numba import njit, prange
+import os
+
+HOME = os.environ["HOME"]
 
 import cost_function_24 as utils
 from cost_function_24 import build_cost_function
@@ -86,4 +89,4 @@ best = stochastic_product_search(
 
 sample_submission['assigned_day'] = best
 final_score = cost_function(best)
-sample_submission.to_csv(f'/home/temp_submission.csv')
+sample_submission.to_csv(f'{HOME}/temp/temp_submission.csv')
