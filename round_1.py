@@ -4,7 +4,7 @@ import numpy as np
 from tqdm import tqdm
 from numba import njit, prange
 import os
-from config import n_iter, top_k, fam_size
+from config import n_iter, top_k, fam_size, sub_path
 
 HOME = os.environ["HOME"]
 
@@ -14,7 +14,7 @@ from cost_function_24 import build_cost_function
 
 data = pd.read_csv('data/family_data.csv', index_col='family_id')
 sample_submission = pd.read_csv("data/sample_submission.csv", index_col='family_id')
-submission = pd.read_csv('data/submission_test_71935.csv', index_col='family_id')
+submission = pd.read_csv(sub_path, index_col='family_id')
 
 # Build your "cost_function"
 cost_function = build_cost_function(data)
