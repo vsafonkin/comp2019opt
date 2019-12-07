@@ -4,6 +4,8 @@ import numpy as np
 from tqdm import tqdm
 from numba import njit, prange
 import os
+from config import n_iter, top_k, fam_size
+
 
 HOME = os.environ["HOME"]
 
@@ -81,10 +83,10 @@ choice_matrix = data.loc[:, 'choice_0': 'choice_9'].values
 # Round 1
 best = stochastic_product_search(
     choice_matrix=choice_matrix, 
-    top_k=4,
-    fam_size=3, 
+    top_k=top_k,
+    fam_size=fam_size, 
     original=original, 
-    n_iter=500000,
+    n_iter=n_iter,
 )
 
 sample_submission['assigned_day'] = best
