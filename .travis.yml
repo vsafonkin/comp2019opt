@@ -193,13 +193,12 @@ jobs:
       - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y-%m-%d_%H-%M')}
       - git tag $TRAVIS_TAG
       deploy:
-        provider: releases
-        api_key: $GITHUB_TOKEN
-        file_glob: true
-        file: build/*.csv
+        provider: s3
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_KEY
+        bucket: "comp2019opt"
         skip_cleanup: true
-        on:
-          tags: false
+        local_dir: temp
 
 
 
