@@ -198,7 +198,8 @@ jobs:
         secret_access_key: $AWS_SECRET_KEY
         bucket: "comp2019opt"
         skip_cleanup: true
-        local_dir: temp
+        local_dir: build
+        tag: false
 
 
 
