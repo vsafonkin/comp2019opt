@@ -63,9 +63,9 @@ def stochastic_product_search(top_k, fam_size, original, choice_matrix,
                 best_score = new_score
                 best = new
 
-                # sample_submission['assigned_day'] = best
-                # temp_score = cost_function(best)
-                # sample_submission.to_csv(f'temp/submission_{int(temp_score)}.csv')
+                sample_submission['assigned_day'] = best
+                temp_score = cost_function(best)
+                sample_submission.to_csv(f'temp/submission_{int(temp_score)}.csv')
         
         if new_score < best_score:
             best_score = new_score

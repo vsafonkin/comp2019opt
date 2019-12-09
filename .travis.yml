@@ -29,6 +29,13 @@ jobs:
     - stage: round_1
       script: python3 round_1.py
       cache: pip
+      deploy:
+        provider: s3
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_KEY
+        bucket: "comp2019opt"
+        skip_cleanup: true
+        local_dir: temp
     - stage: round_2
       script: python3 round_2.py
       cache: pip
