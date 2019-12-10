@@ -199,7 +199,6 @@ jobs:
         bucket: "comp2019opt"
         skip_cleanup: true
         local_dir: build
-        tag: false
 
 
 
