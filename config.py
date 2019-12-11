@@ -1,5 +1,5 @@
 top_k = 4
 fam_size = 4
-n_iter = 250000
+n_iter = 500000
 
-sub_path = 'data/submission_71529.csv'
+sub_path = 'data/submission_71485.csv'
