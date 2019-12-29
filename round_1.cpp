@@ -178,7 +178,7 @@ void stochastic_product_search(Index index, ExitFunction fn) { // 15'360'000it/s
     array<uint16_t, DISTRIBUTION.size()> best_indices{};
     array<uint8_t, DISTRIBUTION.size()> best_change{};
     for (; fn();) {
-        printf("search...")
+        printf("search...");
         bool found_better = false;
         for (int k = 0; k < BEST_N; ++k) {
             for (int i = 0; i < DISTRIBUTION.size(); ++i) //random swap
