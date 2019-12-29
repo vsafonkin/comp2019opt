@@ -37,7 +37,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_2
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
