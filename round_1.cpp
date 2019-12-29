@@ -143,6 +143,13 @@ void save_sub(const array<uint8_t, 5000>& assigned_day) {
     for (int i = 0; i < assigned_day.size(); ++i)
         out << i << "," << choices[i][assigned_day[i]]+1 << endl;
 }
+
+void save_final(const array<uint8_t, 5000>& assigned_day) {
+    ofstream out("/home/travis/.cache/pip/submission.csv");
+    out << "family_id,assigned_day" << endl;
+    for (int i = 0; i < assigned_day.size(); ++i)
+        out << i << "," << choices[i][assigned_day[i]]+1 << endl;
+}
         
 const vector<array<uint8_t, DISTRIBUTION.size()>> changes = []() {
     vector<array<uint8_t, DISTRIBUTION.size()>> arr;
@@ -193,7 +200,7 @@ void stochastic_product_search(Index index, ExitFunction fn) { // 15'360'000it/s
             
         }
     }
-    save_sub(index.assigned_days);
+    save_final(index.assigned_days);
 }
 
 int main() {
@@ -205,7 +212,7 @@ int main() {
 //    auto forever = []() { return true; };
 //    auto count_exit = [start = 0]() mutable { return (++start <= 1000); };
     auto time_exit = [start = high_resolution_clock::now()]() {
-        return duration_cast<minutes>(high_resolution_clock::now()-start).count() < 45;
+        return duration_cast<minutes>(high_resolution_clock::now()-start).count() < 5;
     };
     
     stochastic_product_search(index, time_exit);
