@@ -27,7 +27,7 @@ install:
 jobs:
   include:
     - stage: round_1
-      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_1 round_1.cpp
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_1 round_1.cpp && ./round_1
       cache: pip
       deploy:
         provider: s3
