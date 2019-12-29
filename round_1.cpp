@@ -213,7 +213,7 @@ int main() {
 //    auto forever = []() { return true; };
 //    auto count_exit = [start = 0]() mutable { return (++start <= 1000); };
     auto time_exit = [start = high_resolution_clock::now()]() {
-        return duration_cast<minutes>(high_resolution_clock::now()-start).count() < 5;
+        return duration_cast<minutes>(high_resolution_clock::now()-start).count() < 47;
     };
     
     stochastic_product_search(index, time_exit);

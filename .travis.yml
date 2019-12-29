@@ -47,7 +47,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_3
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -57,7 +57,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_4
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -67,7 +67,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_5
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -77,7 +77,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_6
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -87,7 +87,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_7
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -97,7 +97,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_8
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -107,7 +107,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_9
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -117,7 +117,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_10
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -127,7 +127,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_11
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -137,7 +137,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_12
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -147,7 +147,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_13
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -157,7 +157,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_14
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -167,7 +167,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_15
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -177,7 +177,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: round_16
-      script: python3 round_2.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       deploy:
         provider: s3
@@ -187,7 +187,7 @@ jobs:
         skip_cleanup: true
         local_dir: temp
     - stage: final_round_and_deploy
-      script: python3 stochastic_search.py
+      script: g++ -pthread -lpthread -O3 -std=c++17 -o round_2 round_2.cpp && ./round_2
       cache: pip
       before_deploy:
       - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y-%m-%d_%H-%M')}
