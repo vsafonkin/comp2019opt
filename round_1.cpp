@@ -206,7 +206,7 @@ void stochastic_product_search(Index index, ExitFunction fn) { // 15'360'000it/s
 
 int main() {
     init_data();
-    auto assigned_day = read_submission("./data/submission_69811.csv");
+    auto assigned_day = read_submission("./data/submission_69733.csv");
 
     Index index(assigned_day);
     calc(index.assigned_days, true);
