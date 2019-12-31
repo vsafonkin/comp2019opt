@@ -11,7 +11,7 @@ using namespace std;
 #include <chrono>
 using namespace std::chrono;
 
-constexpr array<uint8_t, 14> DISTRIBUTION{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4}; // You can setup how many families you need for swaps and what best choice use for each family
+constexpr array<uint8_t, 14> DISTRIBUTION{2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3}; // You can setup how many families you need for swaps and what best choice use for each family
 // {2, 5} it's mean the first random family will brute force for choices 1-2 and the second random family will brute force for choices 1-5
 
 constexpr int MAX_OCCUPANCY = 300;
@@ -206,14 +206,14 @@ void stochastic_product_search(Index index, ExitFunction fn) { // 15'360'000it/s
 
 int main() {
     init_data();
-    auto assigned_day = read_submission("./data/submission_69705.csv");
+    auto assigned_day = read_submission("./data/submission_69696.csv");
 
     Index index(assigned_day);
     calc(index.assigned_days, true);
 //    auto forever = []() { return true; };
 //    auto count_exit = [start = 0]() mutable { return (++start <= 1000); };
     auto time_exit = [start = high_resolution_clock::now()]() {
-        return duration_cast<minutes>(high_resolution_clock::now()-start).count() < 47;
+        return duration_cast<minutes>(high_resolution_clock::now()-start).count() < 48;
     };
     
     stochastic_product_search(index, time_exit);
